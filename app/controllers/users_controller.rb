@@ -26,6 +26,8 @@ class UsersController < ApplicationController
     params.require(:user).permit(:email, :last_name, :first_name, :address, :password)
   end
 
+  #this method checks a user
+
   def check_user
     redirect_to login_path if !current_user
   end
